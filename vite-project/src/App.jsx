@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css' 
 
 function App() {
-   
-  let counter = 50
+  let [counter,setCounter]=useState(0)
+  //let counter = 0
   const addValue = () => {
+    setCounter(counter+1)
+    console.log(counter)
+  }
+  const decValue = () => {
+    if(counter>0)setCounter(counter-1)
     console.log(counter)
   }
   return (
@@ -17,7 +22,7 @@ function App() {
       <button onClick={addValue}>Add Value</button>
       <br />
       <br/>
-       <button>Remove Value</button>
+       <button onClick={decValue}>Remove Value</button>
     </>
   )
 }
