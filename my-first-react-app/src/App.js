@@ -1,6 +1,8 @@
+import About from "./About";
 function App() {
   return (
-    <h1>Hari Bol</h1>
+     
+    <About/>
   );
 }
 
